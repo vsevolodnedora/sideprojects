@@ -122,7 +122,6 @@ def Frequency(nu, k):
     for i in range(nupoints):
         cur = cur + b1 * pow(q,i-1)
         nu[i] = cur
-
     return nu
 
 # ------------------------------Rad_Intensity---------------------------------
@@ -132,7 +131,7 @@ def Integral(func, ro, a, b, points):
         computes integral of a faction, interval: ro \in [a, b] with
         fun(ro, nu)
     """
-    h = (b-a) / points
+    h = (b-a) / float(points)
     x = a
     sum = 0
 
@@ -176,7 +175,7 @@ def Norm():
 def Tau_Array(tau, x, a, b, ro):
 
     for i in range(points2):
-        x[i]=b-i*(b-a)/points2
+        x[i]=b-i*(b-a)/float(points2)
 
     t = np.zeros(points2)
     for i in range(points2):
@@ -197,6 +196,8 @@ def Tau_Congestion(tau, x, a, b, ro, mu):
 
     tau, x = Tau_Array(tau, x, a, b, ro)
 
+    print("{} {} {} {}".format(tau[0], tau[10], tau[100], tau[999]))
+
     for i in range(points2): # found a future congesion in exp(-tau))
         if (tau[i] * mu) > precision:
             cong = True
@@ -216,6 +217,7 @@ def Tau_Congestion(tau, x, a, b, ro, mu):
             for i in range(1, points2+1): # Check where now congestion begin
                 if ((tau[i]*mu)>precision):
                     x_cong[j + 1] = x[i]
+                    print("tau*mu: i:{} {} > {} precision".format(i, tau[i]*mu, precision))
                     break               # Changing starting point and cycle starts again
 
             # Checking, is the new start point = previos. If so, we find the real start point pf congestion
@@ -238,6 +240,9 @@ def Int_Inten(Func_Eps, ro, nu):
 
     mu = Mu(nu)
     eps = Eps(nu)
+
+    print("mu: {}".format(mu))
+    print("eps: {}".format(eps)) # correct
 
     tau = np.zeros(points2+1)
     x = np.zeros(points2+1)

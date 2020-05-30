@@ -29,10 +29,8 @@ dataset = dataset.sort_values(by="Lambda")
 print(dataset["Mdisk3D"].describe(percentiles=[0.8, 0.9, 0.95]))
 
 mdisk = np.array(dataset.Mdisk3D)
-
 stat_names = ["nobs", "minmax", "mean", "variance", "skewness", "kurtosis"]
 stat_values = stats.describe(mdisk)
-
 for name, value in zip(stat_names, stat_values):
     print("{} : {}".format(name, value))
 
