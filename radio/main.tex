@@ -54,8 +54,105 @@
 
 
 Two classes of extragalactic radio-sources can be selected. The firs has $\nu\approx 1$GGz, comtains sources with spectral index $\alpha=-0.75$, that are constant of slowly decrease with $\nu$. \\
-The stright spectra -- are the sources that are optically thin with power-law distribution of electron energies $N(E) = N_0 E^{\gamma}$ where $\alpha = (1-\gamma/2)$. Concave downward $C^{-}$ spectra are evolutionary consequence of different energy dependences of electron power losses.\\
-The 
+\textbf{Fist class} has the stright spectra -- are the sources that are optically thin with power-law distribution of electron energies $N(E) = N_0 E^{\gamma}$ where $\alpha = (1-\gamma/2)$. Concave downward $C^{-}$ spectra are evolutionary consequence of different energy dependences of electron power losses.\\
+\textbf{Second class} has a $\alpha>-0.5$. In particular, those with $\alpha>0.33$ are commplex sources with self-absorption. Their number, however is small. Majority of sources have intermediate spectra with $\alpha$ slowly decreasing with $\nu$. Their exact origin is difficult to understand, as such spectra require either very low magnetic field energies with high electron energies or, if a combined spectra is concerned, the combination that yield $\alpha=0$ is unlikely. \\
+
+In addition, observed "stright" spectra becomes complex when hore observations is done. \\
+
+A sharp spectral peak characterisitc is a indication of a self-absorbing source. \\
+
+A minima in the spcectra can be a result of a combined spectra which component peaks are separated in frequency.
+
+
+\subsection{Model}
+
+Consider a source whose structure is described by the radial dependence of magnetic field and particle density. Thus we consider a spherically symmetrical source with 
+
+\begin{equation}
+    r^2 = \sqrt{x^2 + y^2 + z^2},
+\end{equation}
+
+\textcolor{gray}{where however a different geometry was intiially applied $r = |x| + (y^2 + z^2)^{1/2}$ -- double cone.}
+
+
+
+
+\subsection{Artuch \& Nedora}
+
+Let us first consider the physical parameters of a radio sources. In case of a uniform source the magnetic inductivity $B_{\perp}$ of a unifrom radio source is determind from observations at a low $\nu_{LF}$ in the optically thick region 
+
+\begin{equation}
+    B_{\perp} = b^2(\gamma)\frac{(\nu_{LF}/2C_1)^5 (\Omega_{LF})^2}{S_{LF}^{2}}\frac{\delta}{1+z}
+    \label{eq:art:bperp}
+\end{equation}
+
+where $B_{\perp} = B\sim\theta$, where $\theta$ is an angle between the direction of the magnetic field and the line of site, $\Omega_{LF}$ is the solid angle of the radio source, which observed at low frequency (in turn, the linear angular size of the source $\theta_{LF} = \sqrt{\Omega_{LF}}$), $S_{LF}$ its flux at the frequency $\nu_{LF}$, and $\delta$ is the Doppler factor of the radio source, $z$ is the red shift of the parent galaxy, $\gamma$ is the exponent i nthe spectrum $N(E) = N_0E^{-\gamma}$, $b(\gamma) = c_5(\gamma)/c_6(\gamma)$ are the functions tabulated, similarly to the constant $C_1$. \\
+
+Using the estimate fro $B_{\perp}$ from observations at high frequency $\nu_{HF}$ (in the optically thin region), we obtain an estimate for the coefficient $N_0$
+
+\begin{equation}
+    N_0 = \frac{1}{c_5(\gamma)}\frac{S_{HF}}{\Omega_{HF}\theta_{LF}D_{PH}}B^{-(\gamma+1)/2}\Big(\frac{\nu_{HF}}{2C_1}\Big)^{(\gamma-1)/2}\frac{(1+z)^{(9+\gamma)/2}}{\delta^{(5+\gamma)/2}}
+    \label{eq:art:n0}
+\end{equation}
+
+where $D_{PH}$ is the photometric distance to the parent galaxy. In equations \ref{eq:art:bperp} and \ref{eq:art:n0}, angular sizes of the source at high and low frequencies appear. \\
+Notably, that only a source if a form of a cylinder with an axis directed along the line of site, would have a visible angular size that is independent of frequency and equal to the physical size of the source. For other geometries of a uniform sources and for non-uniform sources the angular size depends on the frequency. \\
+
+Thus the radio source angular size is model-dependent. A model must be physically motivated to the maximum degree. Here we consider a spherical model for a non-uniform radio source, where the magnetic fields and particle number densities are distributed accordong to a power law:
+
+\begin{align}
+    B_{\perp} &= \frac{B_{\perp}(0)}{1 + k_H(r/R)^m},\\
+    N(r) &= \frac{N(0)}{1 + k_N(r/R)^n}
+\end{align}
+
+where $B_{\perp}$ is the component of the magnetic induction perpendicular to the line of sight, $R$ is the source radius, $k_H$ is the non-uniformity coefficient for the magnetic field, and $k_N$ is the non-uniformoty coefficient for the particle distribution. \\
+
+Our models shows that the non-uniformity of particle distribution can be neglected. For the magnetic field de Bruyn \url{https://ui.adsabs.harvard.edu/abs/1976A\%26A....52..439D/abstract} have shown that in a semi-transparent region, the spectral index is given 
+
+\begin{equation}
+    \alpha_{LF} = \frac{13 - 5n - 3m - 2m\gamma + 2\gamma}{2 - 2n - 2m - \gamma}
+\end{equation}
+
+For a uniform spatial distribution of particles $n=0$ and $h_N = 0$. Extragalactic radio sources in semi-transparent regime have flat spectra, \textit{i.e.,} average spectral index $\langle\alpha\rangle\approx0.9$, then $\langle\gamma\rangle = 2\alpha+1 = 2.8$, result in $m\approx 2$. \\
+
+We further assume that the $B(0) = 0.1$ Gauss, source radius $R=1$pc and the distance to the source is $D=50$Mpc. Thes parameters correspond to the source with a peak of $1$Jy around $1$GHz. And while the parameters of the real source would of course deviate from assumed here, the $\tau=1$ at the spectra maximum. At higher frequencies the source is transparent, while at lower it is opaque. \\
+
+We have shown that the dependence of the angular size on the spectrum does not however depend on the prescribed parameters, such as $B(0)$, $R$, $D$. \\
+
+The size of the source is determined at half maximum emission power relative to the full size of the source $\rho_{0.5}(\nu)/R$, which depends on the emission frequency. While fixing $\gamma=2.8$, we consider different degrees of MF non-uniformity $k_H\in{0,10^5}$. At low frequencies (optically thick regime) we see only the emission from a thin layer of the soruce surface, facing the observer. Thus, we see an actual physical size of the source $R$, that corresponds to the visible angular size $\theta_{LF}$. Hence $\rho_{0.5}(\nu)/R = \theta(\nu)/\theta_{LF}$, where $\theta(\nu)$ is the visible angular size of the source at half power. We compute $\theta(\nu)$ for models with various $k_H$. \\
+
+Figure shows, that at low frequencies we observe the actual size of the source. As we increase the $\nu$, the $\theta$ of the soruces decreases exponentially. For a uniform object this decrease if small by $\sim 13\%$ ($k_H=0$), the change in $\theta$ becomes considerable is we increase the degree on non-uniformity of our model $k_H$. 
+
+Investigation of a large number of models led to the conclusion that the $\theta_{LF}/\theta_{HF}$ depends primarily on $k_H$. 
+
+\subsubsection{Estimation of the angular size of a source at low frequencies}
+
+Let us consider the procedure of estimating the $\theta_{LF}$. We start by considering the optically thin regime, where the source is transparent (high frequency)
+
+We start by introducing constants from Paholchic. Let $e$ be the electron charge, $m_e$ the electron mass, $c$ the speed of light,
+
+\begin{align}
+    c_1 &= \frac{3 e}{4 \pi m_e ^3 c^5} \\
+    a &= \Gamma\Big(\frac{3 \gamma - 1}{12}\Big) \Gamma\Big(\frac{3\gamma + 7}{12}\Big) \\
+    c_5 &= \frac{\sqrt{3}e^3}{16\pi m_e c^2}\frac{\gamma + (7/3)}{\gamma + 1} a \\
+    b &= \Gamma\Big(\frac{3\gamma + 2}{12}\Big)\Gamma\Big(\frac{3\gamma + 10}{12}\Big) \\
+    c_6 &= \sqrt{3}\pi e m_e ^5 c^{10} (\gamma + 10/3) (b / 72) 
+\end{align}
+
+where $\Gamma(\cdot)$ is the gamma function. \\
+then for simplicity we introduce following quntities that depend only on basic model parameters
+
+\begin{align}
+    \epsilon_0 &= c_5 H_{0}^{(\gamma + 1)/2} \Big(\frac{\text{GGz}}{2 c_1}\Big)^{(1-\gamma)/2} \\
+    \mu_0 &= c_6 H_0^{(\gamma + 2)/2} \Big(\frac{\text{GGz}}{2 c_1}\Big)^{-(\gamma+4)/2}
+\end{align}
+
+
+
+
+
+
+
 
 
 %% --------------- 
